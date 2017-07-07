@@ -1,0 +1,235 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* html{
+	background: url("images/arboretum.jpg") no-repeat bottom right fixed;
+	background-size:cover;
+} */
+/*
+	Background Stretcher jQuery Plugin
+	© 2011 ajaxBlender.com
+	For any questions please visit www.ajaxblender.com 
+	or email us at support@ajaxblender.com
+*/
+
+HTML {_background: url(/images/trans.gif) no-repeat fixed;}
+.bgstretcher-area { text-align: left; }
+.bgstretcher, .bgstretcher UL, .bgstretcher UL LI {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.bgstretcher UL, .bgstretcher UL LI {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.bgstretcher {
+	background: black;
+	overflow: hidden;
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	_position: absolute; /*IE6 doesn't support fixed positioning*/
+	top: 0;
+	left: 0;
+}
+
+
+body {
+/*	background-image: url(showalter.jpg);
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position: top right; */
+	font-family:Arial, Helvetica, sans-serif;
+
+}
+
+/* img {
+	border: none;
+}
+*/
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+
+a {
+	color: #7d110c;
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.results a:hover {
+	color: #FFF;
+	text-decoration: underline;
+}
+
+.hiddenContent{
+	display: none;
+}
+
+#currentContent{
+	text-align: center;
+	font-size:24px;
+}
+
+#searchResultsWrapper{
+	height:75px;
+	display: block;
+	position: absolute;
+	width: 99%;
+	margin-top: 0px;
+	top:50%;
+	padding: 0px;
+	margin-right: auto;
+	margin-left: auto;
+
+}
+
+.result{
+	display: inherit;
+	padding: 2px;
+	background-image: url("images/results.png");
+	background-size: cover;
+	width: 42%;
+	margin: auto;
+	right: -1px;
+	position: relative;
+}
+
+.resultSelected{
+	display: inherit;
+	padding: 2px;
+	background-image: url("images/resultsHover.png");
+	background-size: cover;
+	width: 42%;
+	margin: auto;
+	right: -1px;
+	position: relative;
+}
+.resultSelected a{
+	color: #FFF;
+}
+
+.resultLink{
+}
+
+.resultLinkSelected{
+}
+/*.result:hover a {
+	color: #FFF
+}
+*/
+
+#resultsList{
+	list-style: none;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	text-align: center;
+	font-size:18px;
+}
+
+
+#searchFormInner{
+	position:absolute;
+	text-align: center;
+	top:50%;
+	height:75px;
+	width: 99%;
+	margin-top:-38px;
+
+}
+
+#keywordBar{
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	width: 40%;
+	height: 33px;
+	padding: 3px 5px 3px 5px;
+	background: white;
+	color: #9B9B9B;
+	border: 1px solid #BEBEBE;
+	line-height:18px;
+	text-align: center;
+}
+
+#logo{
+	display: block;
+	position: absolute;
+	text-align:right;
+	bottom: 5px;
+	right: 1px;
+	width: 100%;
+	z-index: ;
+}
+
+/*
+#bg{
+	position:fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	
+}
+
+#bg img{
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+*/
+/* ColorBox Core Style */
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block;}
+.cboxIframe{width:100%; height:100%; display:block; border:0;}
+
+/* User Style */
+#cboxOverlay{background:#000;}
+#colorbox{}
+    #cboxTopLeft{width:14px; height:14px; background:url(lightbox/images/controls.png) no-repeat 0 0;}
+    #cboxTopCenter{height:14px; background:url(lightbox/images/border.png) repeat-x top left;}
+    #cboxTopRight{width:14px; height:14px; background:url(lightbox/images/controls.png) no-repeat -36px 0;}
+    #cboxBottomLeft{width:14px; height:43px; background:url(lightbox/images/controls.png) no-repeat 0 -32px;}
+    #cboxBottomCenter{height:43px; background:url(lightbox/images/border.png) repeat-x bottom left;}
+    #cboxBottomRight{width:14px; height:43px; background:url(lightbox/images/controls.png) no-repeat -36px -32px;}
+    #cboxMiddleLeft{width:14px; background:url(lightbox/images/controls.png) repeat-y -175px 0;}
+    #cboxMiddleRight{width:14px; background:url(lightbox/images/controls.png) repeat-y -211px 0;}
+    #cboxContent{background:#fff; overflow:visible; padding: 0px}
+        #cboxLoadedContent{margin-bottom:5px;}
+        #cboxLoadingOverlay{background:url(lightbox/images/loading_background.png) no-repeat center center;}
+        #cboxLoadingGraphic{background:url(lightbox/images/loading.gif) no-repeat center center;}
+        #cboxTitle{position:absolute; bottom:-25px; left:0; text-align:center; width:100%; font-weight:bold; color:#7C7C7C;}
+        #cboxCurrent{position:absolute; bottom:-25px; left:58px; font-weight:bold; color:#7C7C7C;}
+        
+        #cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{position:absolute; bottom:-29px; background:url(lightbox/images/controls.png) no-repeat 0px 0px; width:23px; height:23px; text-indent:-9999px;}
+        #cboxPrevious{left:0px; background-position: -51px -25px;}
+        #cboxPrevious.hover{background-position:-51px 0px;}
+        #cboxNext{left:27px; background-position:-75px -25px;}
+        #cboxNext.hover{background-position:-75px 0px;}
+        #cboxClose{right:0; background-position:-100px -25px;}
+        #cboxClose.hover{background-position:-100px 0px;}
+        
+        .cboxSlideshow_on #cboxSlideshow{background-position:-125px 0px; right:27px;}
+        .cboxSlideshow_on #cboxSlideshow.hover{background-position:-150px 0px;}
+        .cboxSlideshow_off #cboxSlideshow{background-position:-150px -25px; right:27px;}
+        .cboxSlideshow_off #cboxSlideshow.hover{background-position:-125px 0px;}

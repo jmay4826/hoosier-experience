@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="icon" type="image/ico" href="favicon.ico" />
+<link href="nsostyles.css" rel="stylesheet" type="text/css">
+
+<!-- <script type="text/javascript" src="lightbox/jquery1.4.4.js"></script> -->
+<script type="text/javascript" src="jquery-1.5.2.min.js"></script>
+<script type="text/javascript" src="lightbox/jquery.colorbox.js"></script>
+<script type="text/javascript" src="hoosierExperienceKeywords.js"></script>
+<script type="text/javascript" src="hoosierexperience.js"></script>
+<script type="text/javascript" src="bgstretcher.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	
+        //  Initialize Backgound Stretcher	   
+		$('BODY').bgStretcher({
+			images: ['images/showalter.jpg', 'images/clock.jpg', 'images/arboretum.jpg'],
+			imageWidth: 1899, 
+			imageHeight: 1328, 
+			slideDirection: 'N',
+			slideShowSpeed: 'normal',
+			nextSlideDelay: 300000,
+			transitionEffect: 'fade',
+			sequenceMode: 'normal',
+			buttonPrev: '#prev',
+			buttonNext: '#next',
+			pagination: '#nav',
+			anchoring: 'left center',
+			anchoringImg: 'left center'
+		});
+		
+	});
+</script>
+<title>Hoosier Experience</title>
+
+</head>
+
+<body>
+<div id="logo">
+<img src="images/logo.png" width="600px" />
+</div>
+
+<div id="searchFormInner">
+
+
+<input id="keywordBar" onKeyUp="searchKeywords(event)" value="Enter keyword" onClick="this.value=''" />
+
+</div>
+
+<div id="searchResultsWrapper">
+	<div id="searchResults">
+	</div>
+</div>
+<div style='display:none'>
+<div id="culturecenters">
+	<h2>Culture Centers</h2>
+	<img src="images/internationalcenter.jpg" />
+	<ul>
+    	<li><a href="http://www.indiana.edu/~fnecc/">First Nations</a></li>
+		<li>La Casa</li>
+		<li>Asian Culture Center</li>
+		<li>Muslim Student Association</li>
+		<li><a href="http://www.iuhillel.org/">Hillel</a></li>
+		<li>International Center</li>
+		<li>Neal-Marshall Black Culture Center</li>
+		<li>GLBTSSS</li>
+	</ul>
+</div>
+<div id="myinvolvement">
+<img src="images/involvement.jpg" /></div>
+<div id="close">
+
+<iframe src="" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe></div>
+
+</div>
+</body>
+</html>
