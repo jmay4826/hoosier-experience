@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hoosier Experience</title>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/index.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+	<script src="js/keywords.js"></script>
+	<script src="js/search.js"></script>
+	
+</head>
+<body>
+    <div id="logo">
+        <img src="images\logo.png">
+    </div>
+    <div id="search">
+        <div class="wrapper">
+            <input type="text" placeholder="Search for a topic" id="searchBar">
+            <div id="autocomplete">
+            </div>
+        </div>
+    </div>
+    <div class="ui modal">
+      <div class="image content">
+        <img class="image" id="slide">
+      </div>
+    </div>
+</body>
+<script>
+    $("#searchBar").on("keyup", function(){
+            autocomplete($(this).val())
+    });
+    
+    $("#autocomplete").on("click", "a", function(){
+        displaySlide($(this));
+    });
+    
+    
+    var currentBackground = 0;
+    function changeBackground(){
+        var bgs = [
+                    'showalter.jpg',
+                    'clock.jpg',
+                    'arboretum.jpg'
+                    ]
+        if (currentBackground < bgs.length - 1){
+            currentBackground++
+        } else {
+            currentBackground = 0;
+        }
+        var css = {
+            "background": "url('/images/" + bgs[currentBackground] + "')",
+            "background-size": "cover",
+            "transition": "background 2s"
+        }
+        $("body").css(css)
+        
+        console.log("background change")
+    }
+    window.setInterval(changeBackground, 30000);
+    $('.ui.modal').modal();
+</script>
+</html>
